@@ -7,15 +7,11 @@ Users, Products application, a React application that fetches data using GraphQL
 - **Language**: Typescript (4.9+)
 - **Data Fetching**: GraphQL, Apollo Client
 
+## Prerequisites
+* Start the GraphQL backend on localhost at port 3000.
+
 ## Usage
-
-### Start local stand
-
-```bash
-# generate .env
-cp .env.example .env
-# install deps
-npm i
-# run stand
-npm run start
-```
+* `cp .env.example .env` to generate environments
+* `npm install` to installl dependencies
+* `npm run start` to start the local server
+* Load http://localhost:3001

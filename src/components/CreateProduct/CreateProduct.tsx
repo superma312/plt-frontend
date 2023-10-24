@@ -27,7 +27,6 @@ interface ProductFormData {
 
 const CreateProduct = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [price, setPrice] = useState();
   const [form] = Form.useForm();
   const [createProduct, { loading }] = useMutation(CREATE_PRODUCT);
   const { refetch } = useQuery(GET_USERS);
@@ -65,14 +64,6 @@ const CreateProduct = () => {
     refetch();
     form.resetFields();
     handleCancel();
-  };
-
-  const handleChange = (value: any) => {
-    const regex = /^-?\d+(\.\d{1,2})?$/;
-    console.log(regex.test(value))
-    if (regex.test(value)) {
-      setPrice(value);
-    }
   };
 
   return (
